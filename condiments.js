@@ -12,13 +12,6 @@ var SandwichMaker = (function (maker) {
 		return condimentPrice[selectedCondiment];
 	};
 
-	maker.removeCondiment = function (uncheckedCondiment) {
-		selectedCondiment.forEach(function (condiment) {
-			if (uncheckedCondiment.value === condiment) {
-				selectedCondiment.remove();
-			}
-		})
-	};
 
 	return maker;
 })(SandwichMaker || {});

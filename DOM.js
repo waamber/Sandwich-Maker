@@ -16,7 +16,6 @@ breadCheck.addEventListener("change", function (event) {
     } else {
         ingredientsArray.pop(event.target.value);
     }
-    console.log("Added Bread", ingredientsArray);
 });
 
 meatCheck.addEventListener("change", function (event) {
@@ -26,7 +25,6 @@ meatCheck.addEventListener("change", function (event) {
     } else {
         ingredientsArray.pop(event.target.value);
     }
-    console.log("Added Meat", ingredientsArray);
 });
 
 cheeseCheck.addEventListener("change", function (event) {
@@ -36,7 +34,6 @@ cheeseCheck.addEventListener("change", function (event) {
     } else {
         ingredientsArray.pop(event.target.value);
     }
-    console.log("Added Cheese", ingredientsArray);
 });
 
 veggieCheck.addEventListener("change", function (event) {
@@ -46,7 +43,6 @@ veggieCheck.addEventListener("change", function (event) {
     } else {
         ingredientsArray.pop(event.target.value);
     }
-    console.log("Added Veggie", ingredientsArray);
 });
 
 condimentCheck.addEventListener("change", function (event) {
@@ -56,16 +52,13 @@ condimentCheck.addEventListener("change", function (event) {
     } else {
         ingredientsArray.pop(event.target.value);
     }
-    console.log("Added Condiments", ingredientsArray);
 });
 
 buildBtn.addEventListener("click", function () {
     for (let key of Object.keys(ingredientsArray)) {
         let ingredient = ingredientsArray[key];
         selectedIngredients.innerHTML += ingredient.name + " ";
-        console.log("ingredient selected", ingredient.name);
     }
-    console.log("ingredients array:", ingredientsArray);
     totalPrice();
 });
 
@@ -75,12 +68,7 @@ totalPrice = () => {
         let ingredientPrice = value.price;
         ingredientsTotal.push(ingredientPrice);
         var grandTotal = ingredientsTotal.reduce(function (a, b) { return a + b; });
-        console.log("ingredient price", ingredientPrice);
-        console.log("ingredientsTotal", ingredientsTotal);
-        console.log("grandTotal", grandTotal);
-
-        sandwichTotal.innerHTML = grandTotal;
+        sandwichTotal.innerHTML = "$ " + grandTotal;
     }
-
 };
 

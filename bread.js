@@ -1,6 +1,6 @@
 var SandwichMaker = (function (maker) {
 	const breadPrices = {
-		"White": 0.50,
+		"White": 0.55,
 		"Wheat": 0.99,
 		"Rye": 0.75,
 		"Croissant": 1.00,
@@ -10,14 +10,6 @@ var SandwichMaker = (function (maker) {
 
 	maker.addBread = function (selectedBread) {
 		return breadPrices[selectedBread];
-	};
-
-	maker.removeBread = function (uncheckedBread) {
-		selectedBread.forEach(function (bread) {
-			if (uncheckedBread.value === bread) {
-				selectedBread.remove();
-			}
-		})
 	};
 
 	return maker;

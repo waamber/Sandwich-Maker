@@ -4,13 +4,15 @@
 <head>
 	<title>Sandwich Maker</title>
 	<link rel="stylesheet" type="text/css" href="sandwich.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
 </head>
 
 <body>
-	<h1>Welcome to The Sammich Shop!</h1>
-	<h3>Here at The Sammich Shop you can build your own sandwich from variety of organic and cage free meats and veg!</h3>
-	<h5>All the veg are free range AND artisenal AF!</h5>
-
+	<div class="heading">
+		<h1>Welcome to The Sammich Shop!</h1>
+		<h3>Here at The Sammich Shop you can build your own sandwich from variety of organic and cage free meats and veg!</h3>
+		<h5>All the veg are free range AND artisenal AF!</h5>
+	</div>
 	<div class="ingredientsContainer" id="ingredientsContainer">
 
 		<div class="bread" id="breadContainer">Choose your bread:
@@ -75,12 +77,14 @@
 	</div>
 
 
-	<button id="buildBtn">BUILD MY SAMMICH!</button>
+	<div class="buildBtn"><button id="buildBtn">BUILD MY SAMMICH!</button></div>
 
 	<div class="selectedIngredients" id="selectedIngredients"></div>
 
-	<h3>Your Total:</h3>
-	<div id="sandwichTotal"></div>
+	<div class="sandwich-total">
+		<h3>Your Total:</h3>
+		<div id="sandwichTotal"></div>
+	</div>
 
 	<script type=" text/javascript " src="DOM.js "></script>
 	<script type="text/javascript " src="meat.js "></script>
