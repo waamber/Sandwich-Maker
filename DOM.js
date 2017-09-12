@@ -5,7 +5,9 @@ const veggieCheck = document.getElementById("veggiesForm");
 const condimentCheck = document.getElementById("condimentsForm");
 const selectedIngredients = document.getElementById("selectedIngredients");
 const buildBtn = document.getElementById("buildBtn");
+const sandwichTotal = document.getElementById("sandwichTotal");
 let ingredientsArray = [];
+let ingredientsTotal = [];
 
 breadCheck.addEventListener("change", function (event) {
     if (event.target.checked === true) {
@@ -64,5 +66,21 @@ buildBtn.addEventListener("click", function () {
         console.log("ingredient selected", ingredient.name);
     }
     console.log("ingredients array:", ingredientsArray);
+    totalPrice();
 });
+
+totalPrice = () => {
+    for (let value of Object.values(ingredientsArray)) {
+        let prices = ingredientsArray[value];
+        let ingredientPrice = value.price;
+        ingredientsTotal.push(ingredientPrice);
+        var grandTotal = ingredientsTotal.reduce(function (a, b) { return a + b; });
+        console.log("ingredient price", ingredientPrice);
+        console.log("ingredientsTotal", ingredientsTotal);
+        console.log("grandTotal", grandTotal);
+
+        sandwichTotal.innerHTML = grandTotal;
+    }
+
+};
 
