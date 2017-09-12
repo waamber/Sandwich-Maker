@@ -1,19 +1,17 @@
 var SandwichMaker = (function (maker) {
-	const veggies = [{ "Spinach": 0.50 }, { "Arugula": 0.50 }, { "Tomatoes": 0.75 }, { "Lettuce": 0.25 }, { "Onions": 0.75 }, { "Peppers": 0.75 }, { "Cucmbers": 0.75 }, { "Avocado": 1.25 }, { "No Veg": 0 }];
+	const veggiePrices = { "Spinach": 0.50, "Arugula": 0.50, "Tomatoes": 0.75, "Lettuce": 0.25, "Onions": 0.75, "Peppers": 0.75, "Cucmbers": 0.75, "Avocado": 1.25, "No Veg": 0 };
 	let selectedVeggie = [];
 
-	maker.addVeggie = function (veggie) {
-		selectedVeggie.push(veggie);
+	maker.addVeggie = function (selectedVeggie) {
+		return veggiePrices[selectedVeggie];
 	};
+
 	maker.removeVeggie = function (uncheckedVeggie) {
-		selectedVeggie.forEach(function (veggie, index) {
-			if (uncheckedVeggie === veggie) {
-				selectedVeggie.splice(index, 1);
+		selectedVeggie.forEach(function (veggie) {
+			if (uncheckedVeggie.value === veggie) {
+				selectedVeggie.remove();
 			}
 		})
-	};
-	maker.listVeggie = function () {
-		return selectedVeggie;
 	};
 	return maker;
 })(SandwichMaker || {});

@@ -3,6 +3,7 @@
 
 <head>
 	<title>Sandwich Maker</title>
+	<link rel="stylesheet" type="text/css" href="sandwich.css">
 </head>
 
 <body>
@@ -14,67 +15,44 @@
 
 		<div class="bread" id="breadContainer">Choose your bread:
 			<form class="breadForm" id="breadForm">
-				<input type="checkbox" name="white" value="White"> White<br>
-				<input type="checkbox" name="wheat" value="Wheat"> Wheat<br>
-				<input type="checkbox" name="rye" value="Rye"> Rye<br>
-				<input type="checkbox" name="croissant" value="Croissant"> Croissant<br>
-				<input type="checkbox" name="gluten-free" value="Gluten-Free Flatbread"> Gluten-Free Flatbread<br>
-				<input type="checkbox" name="lettuce" value="Lettuce Wrap"> Lettuce Wrap<br>
+				<input type="checkbox" value="White"> White<br>
+				<input type="checkbox" value="Wheat"> Wheat<br>
 			</form>
 		</div>
 
 		<div class="meat" id="meatContainer">Choose your meat:
 			<form class="meatForm" id="meatForm">
-				<input type="checkbox" name="bacon" value="Bacon"> Bacon<br>
-				<input type="checkbox" name="turkey" value="Turkey"> Turkey<br>
-				<input type="checkbox" name="ham" value="Ham"> Ham<br>
-				<input type="checkbox" name="roast-beef" value="Roast Beef"> Roast Beef<br>
-				<input type="checkbox" name="chicken" value="Chicken"> Chicken<br>
-				<input type="checkbox" name="salami" value="Salami"> Salami<br>
-				<input type="checkbox" name="no-meat" value="No Meat"> No Meat<br>
+				<input type="checkbox" value="Bacon"> Bacon<br>
+				<input type="checkbox" value="Turkey"> Turkey<br>
 			</form>
 		</div>
 
 		<div class="cheese" id="cheeseContainer">Choose your cheese:
 			<form class="cheeseForm" id="cheeseForm">
-				<input type="checkbox" name="cheddar" value="Cheddar"> Cheddar<br>
-				<input type="checkbox" name="swiss" value="Swiss"> Swiss<br>
-				<input type="checkbox" name="pepperjack" value="Pepperjack"> Pepperjack<br>
-				<input type="checkbox" name="gouda" value="Gouda"> Gouda<br>
-				<input type="checkbox" name="no-cheese" value="No Cheese"> No Cheese<br>
+				<input type="checkbox" value="Cheddar"> Cheddar<br>
+				<input type="checkbox" value="Swiss"> Swiss<br>
 			</form>
 		</div>
 
 		<div class="veggies" id="veggiesContainer">Choose your veg:
 			<form class="veggiesForm" id="veggiesForm">
-				<input type="checkbox" name="spinach" value="Spinach"> Spinach<br>
-				<input type="checkbox" name="arugula" value="Arugula"> Arugula<br>
-				<input type="checkbox" name="tomatoes" value="Tomatoes"> Tomatoes<br>
-				<input type="checkbox" name="lettuce" value="Lettuce"> Lettuce<br>
-				<input type="checkbox" name="onions" value="Onions"> Onions<br>
-				<input type="checkbox" name="peppers" value="Peppers"> Peppers<br>
-				<input type="checkbox" name="cucumbers" value="Cucumbers"> Cucumbers<br>
-				<input type="checkbox" name="avocados" value="Avocado"> Avocado<br>
-				<input type="checkbox" name="no-veg" value="No Veg"> No Veg<br>
+				<input type="checkbox" value="Spinach"> Spinach<br>
+				<input type="checkbox" value="Arugula"> Arugula<br>
 			</form>
 		</div>
 
 		<div class="condiments" id="condimentsContainer">Choose your condiments:
 			<form class="condimentsForm" id="condimentsForm">
-				<input type="checkbox" name="mustard" value="Mustard"> Mustard<br>
-				<input type="checkbox" name="ketchup" value="Ketchup"> Ketchup<br>
-				<input type="checkbox" name="vinegar-oil" value="Vinegar and Oil"> Vinegar and Oil<br>
-				<input type="checkbox" name="sriracha" value="Srircha"> Srircha<br>
-				<input type="checkbox" name="miracle-whip" value="Miracle Whip"> Miracle Whip<br>
-				<input type="checkbox" name="no-condiments" value="No Condiments"> No Condiments<br>
+				<input type="checkbox" value="Mustard"> Mustard<br>
+				<input type="checkbox" value="Ketchup"> Ketchup<br>
 			</form>
 		</div>
 	</div>
 
+	<div class="selectedIngredients" id="selectedIngredients"></div>
 	<button id="buildBtn">BUILD MY SAMMICH!</button>
 
-	<div class="selectedIngredients" id="selectedIngredients">Where Added Ingredients Will Go</div>
-
+	<script type="text/javascript" src="DOM.js"></script>
 	<script type="text/javascript" src="sandwich.js"></script>
 	<script type="text/javascript" src="meat.js"></script>
 	<script type="text/javascript" src="cheese.js"></script>
