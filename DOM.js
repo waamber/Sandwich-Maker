@@ -4,6 +4,7 @@ const cheeseCheck = document.getElementById("cheeseForm");
 const veggieCheck = document.getElementById("veggiesForm");
 const condimentCheck = document.getElementById("condimentsForm");
 const selectedIngredients = document.getElementById("selectedIngredients");
+const buildBtn = document.getElementById("buildBtn");
 let ingredientsArray = [];
 
 breadCheck.addEventListener("change", function (event) {
@@ -55,3 +56,13 @@ condimentCheck.addEventListener("change", function (event) {
     }
     console.log("Added Condiments", ingredientsArray);
 });
+
+buildBtn.addEventListener("click", function () {
+    for (let key of Object.keys(ingredientsArray)) {
+        let ingredient = ingredientsArray[key];
+        selectedIngredients.innerHTML += ingredient.name + " ";
+        console.log("ingredient selected", ingredient.name);
+    }
+    console.log("ingredients array:", ingredientsArray);
+});
+

@@ -1,6 +1,12 @@
 var SandwichMaker = (function (maker) {
-	const cheesePrices = { "Cheddar": 0.50, "Swiss": 0.50, "Pepperjack": 0.75, "Gouda": 0.75, "No Cheese": 0 };
-	let selectedCheese = [];
+	const cheesePrices = {
+		"Cheddar": 0.50,
+		"Swiss": 0.50,
+		"Pepperjack": 0.75,
+		"Gouda": 0.75,
+		"Extra Cheese": 0.75,
+		"No Cheese": 0
+	};
 
 	maker.addCheese = function (selectedCheese) {
 		return cheesePrices[selectedCheese];
