@@ -6,7 +6,7 @@ var SandwichMaker = (function (maker) {
 		"Lettuce": 0.25,
 		"Onions": 0.75,
 		"Peppers": 0.75,
-		"Cucmbers": 0.75,
+		"Cucumbers": 0.75,
 		"Avocado": 1.25,
 		"No Veg": 0
 	};
