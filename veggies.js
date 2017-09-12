@@ -1,7 +1,7 @@
 var SandwichMaker = (function (maker) {
 	const veggiePrices = {
-		"Spinach": 0.50,
-		"Arugula": 0.50,
+		"Spinach": 0.55,
+		"Arugula": 0.55,
 		"Tomatoes": 0.75,
 		"Lettuce": 0.25,
 		"Onions": 0.75,
@@ -15,12 +15,5 @@ var SandwichMaker = (function (maker) {
 		return veggiePrices[selectedVeggie];
 	};
 
-	maker.removeVeggie = function (uncheckedVeggie) {
-		selectedVeggie.forEach(function (veggie) {
-			if (uncheckedVeggie.value === veggie) {
-				selectedVeggie.remove();
-			}
-		})
-	};
 	return maker;
 })(SandwichMaker || {});

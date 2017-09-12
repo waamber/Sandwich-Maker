@@ -1,7 +1,7 @@
 var SandwichMaker = (function (maker) {
 	const cheesePrices = {
-		"Cheddar": 0.50,
-		"Swiss": 0.50,
+		"Cheddar": 0.55,
+		"Swiss": 0.55,
 		"Pepperjack": 0.75,
 		"Gouda": 0.75,
 		"Extra Cheese": 0.75,
@@ -12,13 +12,5 @@ var SandwichMaker = (function (maker) {
 		return cheesePrices[selectedCheese];
 	};
 
-	maker.removeCheese = function (uncheckedCheese) {
-		selectedCheese.forEach(function (cheese) {
-			if (uncheckedCheese.value === cheese) {
-				selectedCheese.remove();
-			}
-		})
-	};
 	return maker;
-
 })(SandwichMaker || {});
