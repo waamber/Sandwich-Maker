@@ -1,10 +1,18 @@
-var SandwichMaker = (function (ingredients) {
-	const condiments = [{ "Mustard": 0.05 }, { "Ketchup": 0.05 }, { "Vinegar and Oil": 0.75 }, { "Sriracha": 0.10 }, { "Miracle Whip": 0.10 }, { "No Condiments": 0 }];
+var SandwichMaker = (function (maker) {
+	const condimentPrice = { "Mustard": 0.05, "Ketchup": 0.05, "Vinegar and Oil": 0.75, "Sriracha": 0.10, "Miracle Whip": 0.10, "No Condiments": 0 };
+	let selectedCondiment = [];
 
-	ingredients.listCondiments = function () {
-		return condiments;
-	}
+	maker.addCondiment = function (selectedCondiment) {
+		return condimentPrice[selectedCondiment];
+	};
 
+	maker.removeCondiment = function (uncheckedCondiment) {
+		selectedCondiment.forEach(function (condiment) {
+			if (uncheckedCondiment.value === condiment) {
+				selectedCondiment.remove();
+			}
+		})
+	};
 
-	return ingredients;
+	return maker;
 })(SandwichMaker || {});

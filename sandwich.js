@@ -1,20 +1,13 @@
-const meatCheck = document.getElementById("meatForm");
-const selectedIngredients = document.getElementById("selectedIngredients");
-
-meatCheck.addEventListener("change", function (event) {
-    if (event.target.checked === true) {
-        SandwichMaker.addMeat(event.target.value);
-    } else {
-        SandwichMaker.removeMeat(event.target.value);
-    }
-    console.log(SandwichMaker.listMeats());
-});
+var SandwichMaker = (function () {
 
 
+    // Private variable to store the price
+    var totalPrice = 0;
 
-//add removal 
-
-
-
-
-
+    // Return the public interface that other code can interact with
+    return {
+        addTopping: function (toppingPrice) {
+            totalPrice += toppingPrice;
+        }
+    };
+})();
